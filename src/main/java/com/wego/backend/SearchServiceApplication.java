@@ -32,7 +32,7 @@ public class SearchServiceApplication extends Application<SearchServiceConfigura
 
 	@Override
 	public String getName() {
-		return "hello-world";
+		return "airline-search";
 	}
 
 	@Override
@@ -53,9 +53,9 @@ public class SearchServiceApplication extends Application<SearchServiceConfigura
 	    final RouteDAO routeDao = new RouteDAO(hibernateBundle.getSessionFactory());
 
 		
-		final TemplateHealthCheck healthCheck =
-		        new TemplateHealthCheck(configuration.getTemplate());
-		    environment.healthChecks().register("template", healthCheck);
+//		final TemplateHealthCheck healthCheck =
+//		        new TemplateHealthCheck(configuration.getTemplate());
+//		    environment.healthChecks().register("template", healthCheck);
 
 		environment.jersey().register(new RouteResource(routeDao));
 	}
