@@ -1,7 +1,7 @@
 # AirlineSearchBackend
 
-A DropWizard Project connected to Postgresql Database
-1) Provides API "/routes" and "routes/search"
+A DropWizard Project connected to Postgresql Database which <br/>1) Accepts data of XML format for POST requests  <br/>
+2) Provides API "/routes" and "routes/search"
 
 # Run migrations to set up table in DB
 java $JAVA_OPTS -jar target/AirlineSearchService-0.0.1-SNAPSHOT.jar db migrate airline-search-config.yml
