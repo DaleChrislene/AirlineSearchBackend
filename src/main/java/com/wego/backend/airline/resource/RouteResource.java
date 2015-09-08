@@ -16,7 +16,7 @@ import com.wego.backend.entities.Airline;
 import com.wego.backend.entities.Route;
 import com.wego.backend.entities.dao.RouteDAO;
 
-@Path("/routes")
+@Path("/")
 public class RouteResource {
 	private final RouteDAO routeDao;
 	
@@ -25,6 +25,14 @@ public class RouteResource {
 	}
 	
 	@GET
+	@Produces("text/html")
+	public String getDefaultResponse(){
+		String response = "Welcome to the Backend App!";
+		return response;
+	}
+	
+	@GET
+	@Path("/routes")
 	@UnitOfWork
 	@Produces(MediaType.APPLICATION_XML)
 	public List<Route> getRoute(){
@@ -32,7 +40,7 @@ public class RouteResource {
 	}
 	
 	@POST
-	@Path("/search")
+	@Path("/routes/search")
 	@UnitOfWork
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_XML)

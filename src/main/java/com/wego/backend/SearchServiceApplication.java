@@ -52,11 +52,6 @@ public class SearchServiceApplication extends Application<SearchServiceConfigura
 	    
 	    final RouteDAO routeDao = new RouteDAO(hibernateBundle.getSessionFactory());
 
-		
-//		final TemplateHealthCheck healthCheck =
-//		        new TemplateHealthCheck(configuration.getTemplate());
-//		    environment.healthChecks().register("template", healthCheck);
-
 		environment.jersey().register(new RouteResource(routeDao));
 	}
 
