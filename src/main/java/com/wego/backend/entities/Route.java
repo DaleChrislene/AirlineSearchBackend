@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 @Entity
 @Table(name= "Route")
@@ -26,6 +26,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 			)
 })
 @XmlRootElement(name="route")
+@XmlType (propOrder={"from","to","airline"})
 public class Route {
 	
 	@Id

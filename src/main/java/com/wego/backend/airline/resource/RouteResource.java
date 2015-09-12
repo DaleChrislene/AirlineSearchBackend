@@ -44,9 +44,9 @@ public class RouteResource {
 	@UnitOfWork
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_XML)
-	public List<Airline> getQueryResponse(Route rQuery){
+	public List<Airline> getAirlinesList(Route rQuery){
 		List<Route> routeResultList = routeDao.findAirlineForRoute(rQuery);
-		List<Airline> result = getAirlineList(routeResultList);
+		List<Airline> result = populateAirlinesList(routeResultList);
 		return result;
 	}
 	
@@ -57,7 +57,7 @@ public class RouteResource {
 	 * @param routeList - list satisfying route locations in query
 	 * @return airlineList - list of airlines from routeList
 	 */
-	private List<Airline> getAirlineList(List<Route> routeList){
+	private List<Airline> populateAirlinesList(List<Route> routeList){
 		List<Airline> airlineList = new ArrayList<Airline>();
 		for(Route r : routeList){
 			Airline temp = new Airline();

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<routes>
+	<route>
+		<from>Singapore</from>
+		<to>Tokyo</to>
+		<airline>Cathay Pacific</airline>
+	</route>
+	<route>
+		<from>Singapore</from>
+		<to>London</to>
+		<airline>Cathay Pacific</airline>
+	</route>
+	<route>
+		<from>Dubai</from>
+		<to>Tokyo</to>
+		<airline>Cathay Pacific</airline>
+	</route>
+</routes>
